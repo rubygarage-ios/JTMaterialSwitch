@@ -305,12 +305,12 @@
 - (void)switchAreaTapped:(UITapGestureRecognizer *)recognizer
 {
   // Delegate method
-  if ([self.delegate respondsToSelector:@selector(switchStateChanged:)]) {
+  if ([self.delegate respondsToSelector:@selector(materialSwitch:stateChanged:)]) {
     if (self.isOn == YES) {
-      [self.delegate switchStateChanged:JTMaterialSwitchStateOff];
+      [self.delegate materialSwitch:self stateChanged:JTMaterialSwitchStateOff];
     }
     else{
-      [self.delegate switchStateChanged:JTMaterialSwitchStateOn];
+      [self.delegate materialSwitch:self stateChanged:JTMaterialSwitchStateOn];
     }
   }
   
@@ -567,12 +567,12 @@
   // NSLog(@"track midPosX: %f", CGRectGetMidX(self.track.frame));
   // NSLog(@"%@", NSStringFromCGRect(self.switchThumb.frame));
   // Delegate method
-  if ([self.delegate respondsToSelector:@selector(switchStateChanged:)]) {
+  if ([self.delegate respondsToSelector:@selector(materialSwitch:stateChanged:)]) {
     if (self.isOn == YES) {
-      [self.delegate switchStateChanged:JTMaterialSwitchStateOff];
+      [self.delegate materialSwitch:self stateChanged:JTMaterialSwitchStateOff];
     }
     else{
-      [self.delegate switchStateChanged:JTMaterialSwitchStateOn];
+      [self.delegate materialSwitch:self stateChanged:JTMaterialSwitchStateOn];
     }
   }
   

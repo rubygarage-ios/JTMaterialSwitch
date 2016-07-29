@@ -47,10 +47,11 @@ typedef enum {
   JTMaterialSwitchSizeSmall
 } JTMaterialSwitchSize;
 
+@class JTMaterialSwitch;
 
 @protocol JTMaterialSwitchDelegate <NSObject>
 // Delegate method
-- (void)switchStateChanged:(JTMaterialSwitchState)currentState;
+- (void)materialSwitch:(JTMaterialSwitch *)materialSwitch stateChanged:(JTMaterialSwitchState)currentState;
 @end
 
 @interface JTMaterialSwitch : UIControl
